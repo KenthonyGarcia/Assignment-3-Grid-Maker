@@ -27,7 +27,7 @@ function addC() {
     let col = table.insertColumn(); 
     if(numRows == 0) //if there are no rows we add one so that we can add the columns
     {
-        numRows=1;
+        addR();
     }
     for(let i = 0; i < numRows; i++)//adds a column cell based on how many rows the user has
     {
