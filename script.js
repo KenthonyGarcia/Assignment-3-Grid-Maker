@@ -26,7 +26,8 @@ function addR() {
 function addC() {
     if(numRows == 0) //if there are no rows we add one so that we can add the columns
     {
-        addR();
+        addR();//using addR function to add one row which also adds one column while returning after so that 2 columns do not appear
+        return;
     }
     for(let i = 0; row = table.rows[i]; i++)
     {
