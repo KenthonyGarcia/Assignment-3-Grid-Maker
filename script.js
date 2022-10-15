@@ -3,9 +3,23 @@ let numRows = 0;
 let numCols = 0;
 let colorSelected; 
 
+let table = document.getElementById("grid");
 // Add a row
 function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+    let row = table.insertRow(); 
+    if(numCols == 0) //if there are no columns we add one so that we can add the rows
+    {
+        numCols=1;
+    }
+    for(let i = 0; i < numCols; i++)//adds a row cell based on how many columns the user has
+    {
+        let cell = row.insertCell();
+        cell.onclick = function(event)
+        {
+            this.style.backgroundColor = colorSelected;//chooses the backgroundColor of the cell based on the color that is selected
+        }
+    }
+    numRows++;//after each click on addR one row is added
 }
 
 // Add a column
