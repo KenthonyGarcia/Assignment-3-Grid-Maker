@@ -24,7 +24,20 @@ function addR() {
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    let col = table.insertColumn(); 
+    if(numRows == 0) //if there are no rows we add one so that we can add the columns
+    {
+        numRows=1;
+    }
+    for(let i = 0; i < numRows; i++)//adds a column cell based on how many rows the user has
+    {
+        let cell = col.insertCell();
+        cell.onclick = function(event)
+        {
+            this.style.backgroundColor = colorSelected;//chooses the backgroundColor of the cell based on the color that is selected
+        }
+    }
+    numCols++;//after each click on addC one columnn is added
 }
 
 // Remove a row
