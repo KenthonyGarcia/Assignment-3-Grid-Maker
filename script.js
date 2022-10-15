@@ -28,7 +28,7 @@ function addC() {
     {
         addR();
     }
-    for(let i = 0; i < numRows; i++)//adds a column cell based on how many rows the user has
+    for(let i = 0; row = table.rows[i]; i++)
     {
         let cell = row.insertCell();
         cell.onclick = function(event)
