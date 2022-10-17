@@ -42,7 +42,7 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    if(numRows == 0) //if there are no rows, then we can not remove a row so we returning
+    if(numRows == 0) //if there are no rows, then we can not remove a row so we return
     {
         return;
     }
@@ -56,7 +56,18 @@ function removeR() {
 
 // Remove a column
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+    if(numCols == 0) //if there are no columns, then we can not remove a column so we return
+    {
+        return;
+    }
+    numCols--; //decrement the value of columns
+    if(numCols == 0) //if the number of columns is zero then the all the rows shall be removed
+    {
+        for(let i =0; i < numRows; i++)
+        {
+            removeR();
+        }
+    }
 }
 
 // Set global variable for selected color
