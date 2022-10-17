@@ -85,11 +85,11 @@ function selectColor(){
 function fillU(){
     for(let i=0; i < numRows; i++)
     {
-        for(let i = 0; i < numCols; i++)//for every cell
+        for(let j = 0; j < numCols; j++)//for every cell
         {
-            if(cells[i].style.backgroundColor == "white")//if the cells current background color is set to "white" then it is set to the color selected by the user.
+            if(table.rows[i].cells[j].style.backgroundColor == "white")//if the cells current background color is set to "white" then it is set to the color selected by the user.
             {
-                cells[i].style.backgroundColor = colorSelected;
+                table.rows[i].cells[j].style.backgroundColor = colorSelected;
             }
         }
     }
