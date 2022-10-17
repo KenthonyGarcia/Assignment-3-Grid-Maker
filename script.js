@@ -42,7 +42,16 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+    if(numRows == 0) //if there are no rows, then we can not remove a row so we returning
+    {
+        return;
+    }
+    table.deleteRow(-1);//we remove the row from the table
+    numRows--; //decrement the value of rows
+    if(numRows == 0) //if there are no rows left then the number of columns are set to zero
+    {
+        numCols=0;
+    }
 }
 
 // Remove a column
