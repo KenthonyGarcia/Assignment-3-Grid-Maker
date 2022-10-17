@@ -83,11 +83,14 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    for(let i = 0; i < cells.length; i++)//for every cell
+    for(let i=0; i < numRows; i++)
     {
-        if(cells[i].style.backgroundColor == "white")//if the cells current background color is set to "white" then it is set to the color selected by the user.
+        for(let i = 0; i < numCols; i++)//for every cell
         {
-            cells[i].style.backgroundColor = colorSelected;
+            if(cells[i].style.backgroundColor == "white")//if the cells current background color is set to "white" then it is set to the color selected by the user.
+            {
+                cells[i].style.backgroundColor = colorSelected;
+            }
         }
     }
 }
