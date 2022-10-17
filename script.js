@@ -4,7 +4,6 @@ let numCols = 0;
 let colorSelected; 
 
 let table = document.getElementById("grid");
-let cells = document.querySelectorAll("td");
 // Add a row
 function addR() {
     let row = table.insertRow(); 
@@ -83,6 +82,7 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
+    let cells = document.querySelectorAll("td");
     for(var i = 0; i < cells.length; i++)//for every cell
     {
         if(cells[i].style.backgroundColor == "white")//if the cells current background color is set to "white" then it is set to the color selected by the user.
