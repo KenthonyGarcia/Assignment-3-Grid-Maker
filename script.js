@@ -60,6 +60,10 @@ function removeC() {
     {
         return;
     }
+    for(let i = 0; row = table.rows[i]; i++)
+    {
+        row.deleteCell(-1)
+    }
     numCols--; //decrement the value of columns
     if(numCols == 0) //if the number of columns is zero then the all the rows shall be removed
     {
