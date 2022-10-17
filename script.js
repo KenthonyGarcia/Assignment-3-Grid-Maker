@@ -4,6 +4,7 @@ let numCols = 0;
 let colorSelected; 
 
 let table = document.getElementById("grid");
+let cells = document.querySelectorAll("td");
 // Add a row
 function addR() {
     let row = table.insertRow(); 
@@ -62,14 +63,14 @@ function removeC() {
     }
     for(let i = 0; row = table.rows[i]; i++)
     {
-        row.deleteCell(-1)
+        row.deleteCell(-1)//deletes all the rows cells from the right side going left
     }
     numCols--; //decrement the value of columns
     if(numCols == 0) //if the number of columns is zero then the all the rows shall be removed
     {
         for(let i =0; i < numRows; i++)
         {
-            removeR();
+            removeR();//calls removeR function to remove all the rows 
         }
     }
 }
@@ -82,7 +83,13 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    alert("Clicked Fill All Uncolored"); // Replace this line with your code.
+    for(let i = 0; i < cells.length; i++)//for every cell
+    {
+        if(cells[i].style.backgroundColor == "white")//if the cells current background color is set to "white" then it is set to the color selected by the user.
+        {
+            cells[i].style.backgroundColor == colorSelected;
+        }
+    }
 }
 
 // Fill all cells
