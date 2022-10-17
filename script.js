@@ -87,19 +87,22 @@ function fillU(){
     {
         if(cells[i].style.backgroundColor == "white")//if the cells current background color is set to "white" then it is set to the color selected by the user.
         {
-            cells[i].style.backgroundColor == colorSelected;
+            cells[i].style.backgroundColor = colorSelected;
         }
     }
 }
 
 // Fill all cells
 function fillAll(){
-    for (let i = 0; i < cells.length; i++) 
+    for (let i = 0; i < cells.length; i++) //goes through all cells to fill with the color selected
     {
         cells[i].style.backgroundColor = colorSelected;   
     }
 }
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    for (let i = 0; i < cells.length; i++) //goes through all cells to fill with the color "white"
+    {
+        cells[i].style.backgroundColor = "white";   
+    }
 }
