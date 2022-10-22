@@ -110,6 +110,6 @@ function clearAll(){
     let cells = document.querySelectorAll("td");
     for (let i = 0; i < cells.length; i++) //goes through all cells to fill with the color "white"
     {
-        cells[i].style.backgroundColor = "white";   
+        cells[i].style.backgroundColor = "";   
     }
 }
