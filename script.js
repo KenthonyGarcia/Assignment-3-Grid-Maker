@@ -108,7 +108,7 @@ function fillAll(){
 // Clear all cells
 function clearAll(){
     let cells = document.querySelectorAll("td");
-    for (let i = 0; i < cells.length; i++) //goes through all cells to fill with the color "white"
+    for (let i = 0; i < cells.length; i++) //goes through all cells to empty the colors from the cell
     {
         cells[i].style.backgroundColor = "";   
     }
