@@ -83,6 +83,7 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
+    let table = document.getElementById("grid");
     for(let i=0; i < numRows; i++)
     {
         for(let j = 0; j < numCols; j++)//for every cell
