@@ -83,14 +83,13 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    let table = document.getElementById("grid");
-    for(let i=0; i < numRows; i++)
+    for (var i=0, row; row = table.rows[i]; i++ ) //checks all rows
     {
-        for(let j = 0; j < numCols; j++)//for every cell
+        for (var j=0, cell; cell = row.cells[j]; j++ ) //checks all columns per row
         {
-            if(table.rows[i].cells[j].className == '' )//if the cells current background color is set to "white" then it is set to the color selected by the user.
+            if (cell.style.backgroundColor == "") //if the cell is not colored then it will set the cell to the color selected
             {
-                table.rows[i].cells[j].classList.add(colorSelected);
+                cell.style.backgroundColor = colorSelected;
             }
         }
     }
@@ -98,9 +97,12 @@ function fillU(){
 
 // Fill all cells
 function fillAll(){
-    for (let i = 0; i < cells.length; i++) //goes through all cells to fill with the color selected
+    for (let i=0, row; row = table.rows[i]; i++ ) //checks all rows
     {
-        cells[i].style.backgroundColor = colorSelected;   
+        for (let j=0, cell; cell = row.cells[j]; j++ ) //checks all columns per row
+        {
+            cell.style.backgroundColor = colorSelected;//sets the background color of the cell to the color that was selected
+        }
     }
 }
 // Clear all cells
