@@ -89,7 +89,7 @@ function fillU(){
         {
             if(table.rows[i].cells[j].style.backgroundColor == "white")//if the cells current background color is set to "white" then it is set to the color selected by the user.
             {
-                table.rows[i].cells[j].style.backgroundColor = colorSelected;
+                table.rows[i].cells[j].classList.add(colorSelected);
             }
         }
     }
